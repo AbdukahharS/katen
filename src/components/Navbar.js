@@ -58,10 +58,14 @@ const Navbar = () => {
       </div>
       <div className='buttons'>
         <Link href='/'>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <span>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </span>
         </Link>
         <Link href='/'>
-          <FontAwesomeIcon icon={faBars} />
+          <span>
+            <FontAwesomeIcon icon={faBars} />
+          </span>
         </Link>
       </div>
     </nav>
