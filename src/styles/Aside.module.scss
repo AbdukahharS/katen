@@ -1,0 +1,116 @@
+.side {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 40px;
+
+  .wrapper {
+    border: solid 1px #ebebeb;
+    border-radius: 10px;
+    padding: 35px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .greeting {
+    position: relative;
+
+    .bg {
+      object-fit: contain;
+      height: calc(100% - 70px) !important;
+      width: calc(100% - 60px) !important;
+      top: 35px !important;
+      left: 35px !important;
+    }
+
+    p {
+      color: #8f9bad;
+      font-size: 15px;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .mediaLinks {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+  }
+
+  .posts {
+    h3 {
+      font-size: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+
+      .post {
+        border-bottom: 1px solid #ebebeb;
+        display: grid;
+        grid-template-columns: 60px auto;
+        grid-template-rows: auto;
+        column-gap: 20px;
+        row-gap: 10px;
+        padding: 20px 0;
+
+        .img {
+          width: 60px;
+          height: 60px;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          border-radius: 50%;
+          background-position: center;
+          background-size: contain;
+          margin: auto;
+          position: relative;
+
+          .place {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to top, #fe4f70, #ffa387);
+            height: 24px;
+            width: 24px;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-10%, -25%);
+            border: 3px solid #fff;
+          }
+        }
+
+        h4 {
+          line-height: 1.4;
+          font-size: 15px;
+          transition: inherit;
+        }
+
+        &:hover h4 {
+          color: #fe4f70;
+        }
+
+        span {
+          font-size: 14px;
+          color: #8f9bad;
+        }
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+}
