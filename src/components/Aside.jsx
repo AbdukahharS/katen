@@ -10,6 +10,7 @@ import {
   faTiktok,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const posts = [
   {
@@ -27,6 +28,16 @@ const posts = [
     img: '/img/posts/matt-le-112706-unsplash-150x150.jpg',
     publishedAt: '13/03/2021',
   },
+]
+
+const topics = [
+  { name: 'Celebration', posts: 2 },
+  { name: 'Culture', posts: 2 },
+  { name: 'Fashion', posts: 1 },
+  { name: 'Inspiration', posts: 2 },
+  { name: 'Lifestyle', posts: 6 },
+  { name: 'Politic', posts: 2 },
+  { name: 'Trending', posts: 2 },
 ]
 
 const Aside = () => {
@@ -88,6 +99,20 @@ const Aside = () => {
               </div>
               <h4>{post.name}</h4>
               <span>{post.publishedAt}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className={`${styles.topics}  ${styles.wrapper}`}>
+        <h3>Popular Posts</h3>
+        <Image src='/img/wave.svg' width={33} height={6} alt='wave' />
+        <div className={styles.list}>
+          {topics.map((topic, i) => (
+            <Link href={`/topic/${i}`} className={styles.topic} key={i}>
+              <FontAwesomeIcon icon={faChevronRight} />
+              <h4>{topic.name}</h4>
+              <span>({topic.posts})</span>
             </Link>
           ))}
         </div>

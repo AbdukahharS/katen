@@ -113,4 +113,44 @@
       }
     }
   }
+
+  .topics {
+    .list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .topic {
+        width: 100%;
+        border-top: 1px solid #ebebeb;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+
+        svg {
+          color: #fe4f70;
+        }
+
+        h4 {
+          flex: 1;
+          font-size: 15px;
+          color: #203656;
+          font-weight: 600;
+          transition: inherit;
+        }
+
+        &:hover h4 {
+          color: #fe4f70;
+        }
+
+        span {
+          color: #8f9bad;
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }
