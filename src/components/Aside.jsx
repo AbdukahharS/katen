@@ -136,6 +136,17 @@ const Aside = () => {
           </p>
         </form>
       </div>
+
+      <div className={styles.ad}>
+        <h3>- SPONSORED AD -</h3>
+        <Image
+          src='/img/ad.png'
+          width={360}
+          height={370}
+          quality={100}
+          alt='Advertisement'
+        />
+      </div>
     </aside>
   )
 }
