@@ -40,6 +40,19 @@ const topics = [
   { name: 'Trending', posts: 2 },
 ]
 
+const tags = [
+  'Audio',
+  'Content',
+  'Featured',
+  'Image',
+  'Inspiration',
+  'Lifestyle',
+  'Photo',
+  'Pick',
+  'Slide',
+  'Trending',
+]
+
 const Aside = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -126,7 +139,7 @@ const Aside = () => {
         <Image src='/img/wave.svg' width={33} height={6} alt='wave' />
         <form onClick={handleSubmit}>
           <h4>Join 70,000 subscribers!</h4>
-          <input type='email' placeholder='Email address...' />
+          <input type='email' placeholder='Email address...' required />
           <button type='submit'>
             <span>Sign Up</span>
           </button>
@@ -146,6 +159,16 @@ const Aside = () => {
           quality={100}
           alt='Advertisement'
         />
+      </div>
+
+      <div className={`${styles.tags} ${styles.wrapper}`}>
+        <h3>Tag Clouds</h3>
+        <Image src='/img/wave.svg' width={33} height={6} alt='wave' />
+        <div className={styles.list}>
+          {tags.map((tag) => (
+            <Link href={`tag/${tag}`}>#{tag}</Link>
+          ))}
+        </div>
       </div>
     </aside>
   )

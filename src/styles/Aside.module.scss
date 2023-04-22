@@ -242,4 +242,27 @@
       font-weight: 500;
     }
   }
+
+  .tags {
+    .list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      a {
+        color: #8f9bad;
+        padding: 3px 14px;
+        border-radius: 25px;
+        border: solid 1px #ebebeb;
+        font-size: 13px;
+        line-height: 1.7;
+
+        &:hover {
+          color: #fe4f70;
+          border-color: #fe4f70;
+        }
+      }
+    }
+  }
 }
