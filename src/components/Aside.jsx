@@ -41,6 +41,9 @@ const topics = [
 ]
 
 const Aside = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
   return (
     <aside className={styles.side}>
       <div className={`${styles.greeting} ${styles.wrapper}`}>
@@ -116,6 +119,22 @@ const Aside = () => {
             </Link>
           ))}
         </div>
+      </div>
+
+      <div className={`${styles.newsletter} ${styles.wrapper}`}>
+        <h3>Newsletter</h3>
+        <Image src='/img/wave.svg' width={33} height={6} alt='wave' />
+        <form onClick={handleSubmit}>
+          <h4>Join 70,000 subscribers!</h4>
+          <input type='email' placeholder='Email address...' />
+          <button type='submit'>
+            <span>Sign Up</span>
+          </button>
+          <p>
+            By signing up, you agree to our{' '}
+            <Link href='/privacy'>Privacy Policy</Link>
+          </p>
+        </form>
       </div>
     </aside>
   )

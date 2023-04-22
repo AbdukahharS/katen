@@ -123,7 +123,7 @@
       .topic {
         width: 100%;
         border-top: 1px solid #ebebeb;
-        padding: 20px 0;
+        padding: 14px 0;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -149,6 +149,83 @@
         span {
           color: #8f9bad;
           font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+
+      h4 {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      input {
+        border-radius: 25px;
+        padding: 8px 24px;
+        font-size: 14px;
+        line-height: 1.6;
+        border: solid 1px #ebebeb;
+        outline: none;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+
+        &:focus {
+          border-color: #fe4f70;
+        }
+      }
+
+      button {
+        width: 100%;
+        background: linear-gradient(to right, #fe4f70, #ffa387);
+        color: #fff;
+        padding: 9.5px 36px;
+        border-radius: 25px;
+        font-size: 14px;
+        position: relative;
+
+        span {
+          z-index: 2;
+          position: relative;
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          background: linear-gradient(to left, #fe4f70, #ffa387);
+          z-index: 1;
+          transition: inherit;
+          opacity: 0;
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #8f9bad;
+        text-align: center;
+
+        a {
+          color: #fe4f70;
+
+          &:hover {
+            color: #203656;
+          }
         }
       }
     }
