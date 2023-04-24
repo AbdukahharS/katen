@@ -1,0 +1,145 @@
+.article {
+  border: solid 1px #ebebeb;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 40px;
+
+  .imgContainer {
+    width: 100%;
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+    img {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      width: calc(100% + 2px) !important;
+      height: calc(100% + 1px) !important;
+      left: -1px !important;
+      top: -1px !important;
+      transition: all 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .publish {
+    margin: 50px 50px 16px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    color: #8f9bad;
+    font-size: 14px;
+
+    img {
+      border-radius: 50%;
+    }
+
+    a:hover {
+      color: #fe4f70;
+    }
+
+    .dot {
+      width: 3px;
+      height: 3px;
+      background: #fe4f70;
+    }
+  }
+
+  .body {
+    margin: 0 50px 40px 50px;
+
+    a {
+      color: #203656;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.4;
+      display: block;
+
+      &:hover {
+        color: #fe4f70;
+      }
+    }
+
+    p {
+      color: #8f9bad;
+      font-size: 16px;
+    }
+  }
+
+  .links {
+    padding: 20px 0;
+    margin: 0 50px;
+    border-top: solid 1px #ebebeb;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .socialMedia {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #8f9bad;
+
+      a:hover {
+        color: #203656;
+      }
+    }
+
+    .continue {
+      font-size: 17px;
+      color: #203656;
+      font-weight: 600;
+
+      svg {
+        margin-left: 10px;
+        transition: inherit;
+      }
+
+      &:hover svg {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  .category {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: block;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #fe4f70, #ffa387);
+
+    span {
+      position: relative;
+      z-index: 2;
+      font-size: 14px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      background: linear-gradient(to left, #fe4f70, #ffa387);
+      z-index: 1;
+      transition: inherit;
+      opacity: 0;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}

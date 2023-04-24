@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Hero from '../components/home/Hero'
 import Aside from '@/components/Aside'
 import styles from '@/styles/Home.module.scss'
+import Article from '@/components/Article'
 
 export default function Home() {
   return (
@@ -14,7 +15,12 @@ export default function Home() {
       </Head>
       <Hero />
       <section className={styles.container}>
-        <main className={styles.main}>Main</main>
+        <main className={styles.main}>
+          <Article />
+          <Article />
+          <Article />
+          <Article />
+        </main>
         <Aside />
       </section>
     </>

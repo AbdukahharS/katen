@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '@/styles/Aside.module.scss'
+import styles from '@/styles/components/Aside.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookF,
@@ -165,8 +165,10 @@ const Aside = () => {
         <h3>Tag Clouds</h3>
         <Image src='/img/wave.svg' width={33} height={6} alt='wave' />
         <div className={styles.list}>
-          {tags.map((tag) => (
-            <Link href={`tag/${tag}`}>#{tag}</Link>
+          {tags.map((tag, i) => (
+            <Link key={i} href={`tag/${tag}`}>
+              #{tag}
+            </Link>
           ))}
         </div>
       </div>
