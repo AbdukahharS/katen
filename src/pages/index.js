@@ -3,6 +3,7 @@ import Hero from '../components/home/Hero'
 import Aside from '@/components/Aside'
 import styles from '@/styles/Home.module.scss'
 import Article from '@/components/Article'
+import Pagination from '@/components/Pagination'
 
 export default function Home() {
   return (
@@ -16,10 +17,13 @@ export default function Home() {
       <Hero />
       <section className={styles.container}>
         <main className={styles.main}>
-          <Article />
-          <Article />
-          <Article />
-          <Article />
+          <div className={styles.articles}>
+            <Article />
+            <Article />
+            <Article />
+            <Article />
+          </div>
+          <Pagination />
         </main>
         <Aside />
       </section>
