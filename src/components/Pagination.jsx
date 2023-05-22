@@ -16,7 +16,6 @@ const Pagination = () => {
   const router = useRouter()
   const pageNumber = Number(router.query.number || 1)
   const [pages, setPages] = useState([])
-  console.log(pages)
 
   useEffect(() => {
     if (totalPages === 1) {

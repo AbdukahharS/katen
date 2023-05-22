@@ -1,6 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import Navbar from '@/components/Navbar.jsx'
 import Header from '@/components/Header.jsx'
+import Footer from '@/components/Footer'
 
 export default function Document() {
   return (
@@ -11,6 +12,7 @@ export default function Document() {
           <Header />
           <Navbar />
           <Main />
+          <Footer />
           <NextScript />
         </div>
       </body>
